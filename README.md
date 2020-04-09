@@ -101,8 +101,9 @@ Other features
 
 Relevant Python Github Repositories
 ------------------------------------
-      1. https://github.com/googleapis/dialogflow-python-client-v2
-      2. https://github.com/python-telegram-bot/python-telegram-bot
+[Python Dialogflow Client V2](https://github.com/googleapis/dialogflow-python-client-v2)
+
+[Python Telegram Wrapper](https://github.com/python-telegram-bot/python-telegram-bot)
       
       
 Retrieve Telegram API Token
