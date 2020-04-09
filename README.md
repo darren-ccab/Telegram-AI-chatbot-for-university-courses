@@ -98,3 +98,13 @@ Other features
 2. Generate Comments: generateResults.py
 
       `python generateResults.py`
+
+Relevant Python Github Repositories
+------------------------------------
+      1. https://github.com/googleapis/dialogflow-python-client-v2
+      2. https://github.com/python-telegram-bot/python-telegram-bot
+      
+      
+Retrieve Telegram API Token
+---------------------------
+https://core.telegram.org/bots#6-botfather
