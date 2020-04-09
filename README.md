@@ -2,6 +2,8 @@
 
 **Developer Guide: [PublicDevGuide.pdf](https://github.com/darren-ccab/Telegram-AI-chatbot-for-university-courses/blob/master/PublicDevGuide.pdf)**
 
+**Gitbook Developer Guide**: https://shortjennifer26.gitbook.io/telegram-ai-chatbot-for-university-courses/
+
 ## Prerequisites
 
 Python 3
