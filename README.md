@@ -1,6 +1,6 @@
 # Telegram-AI-chatbot-for-university-courses
 
-**Developer Guide: [PublicDevGuide.pdf](https://github.com/DarrenCzen/Telegram-AI-chatbot-for-university-courses/blob/master/PublicDevGuide.pdf)**
+**Developer Guide: [PublicDevGuide.pdf](https://github.com/darren-ccab/Telegram-AI-chatbot-for-university-courses/blob/master/PublicDevGuide.pdf)**
 
 ## Prerequisites
 
