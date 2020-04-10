@@ -2,7 +2,7 @@
 
 ## Developer Guide
 
-**Gitbook Link**: https://shortjennifer26.gitbook.io/telegram-ai-chatbot-for-university-courses/
+**Gitbook Link**: https://darrenccab.gitbook.io/telegram-ai-chatbot-for-university-courses/
 
 **Github Link**: [PublicDevGuide.pdf](https://github.com/darren-ccab/Telegram-AI-chatbot-for-university-courses/blob/master/PublicDevGuide.pdf)
 
