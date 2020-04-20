@@ -1,0 +1,242 @@
+﻿How do we define a variable of a value?,"You can use let instead of const, however it is not available until Source 3."
+How should I name my functions?,"In the spirit of communicating computational processes, good names are very important. ""turn_upside_down"" immediately explains what a function is doing, whereas ""t_u_d"" does not explain anything and more likely serves to confuse."
+how to determine the space taken for iteration and recursion process?,"Every function and operation (x*y) occupies space. In the case of factorial function, the iterative function has only one number z (as it has been calculated instead of  more number in recursive (a*b*c). "
+"Is there any difference between an ""iterative"" function and a ""tail-recursive"" function?","Yes, they mean the same thing in Source. We make a distinction between recursion and iteration (tail recursion) as you will find that both methods are often viable for solving a problem, but result in completely different solutions and ways of thinking."
+Where can I find learning materials for source academy?,https://sourceacademy.nus.edu.sg/material
+What is the number of steps for Iterative function of fibonacci,"O(n). In the reflection we would say k * n, but fundamentally it's O(n)."
+Where can I find the specifications for Source?,"The specification of Source in
+https://sicp.comp.nus.edu.sg/source/
+
+and the lectures are your definitive resource on this.
+
+The implementation of Source may currently be a bit more generous, and may actually give ""correct"" results, meaning, results that are consistent with the JavaScript specifications. But please do not rely on this. Treat it as an ""undocumented feature"". Next time when we work on the Source implementation, we may decide to close this gap, and your program may stop working as expected."
+What is the difference between let array and const array,"Think of the array I am pointing to as the address of the house and the contents inside the array be the people living in the house.
+
+When I write const a = [1,2,3],
+the const a is the address of my house and what is inside the brackets is the people living in it. when I change the contents of my array, lets say a[0] = 4, I am changing the people who live in my house but I am still talking about the same house.
+
+If I did a = [6,5,3]
+
+Then I am trying to get my a to refer to a completely different house which will throw an error."
+"
+What is the reason for not allowing standalone if's statements?","Many of you who have had prior programming experience will be more familiar with a construct called ""conditional statements"", which starts with ""if"". We will introduce conditional statements in L3 (Week 3).
+
+In Lecture L2, we will introduce a mental model that allows us to understand in detail what happens when we evaluate programs in our language. We shall call it the substitution model. It works particularly well when we restrict ourselves (for now) to programs whose function body start with ""return"". So at the moment, writing functions is easy, you can always write:
+
+function my_function_name(x, y, z) {
+    return ....;
+}
+
+Those of you who have programming background: Think of it as a challenge! Can you write all your functions this way?"
+Will I be penalised if I store functions in const?,"
+Remember the purpose of programming: Communicating computational processes.
+
+If you are writing a large program in which you use quarter_turn_right a lot, it might become hard to read and unnecessarily verbose. No one prevents you from introducing shorter names for predeclared functions. Having said that: Often, names with full English words make programs quite readable. So sometimes, you have the tradeoff between brevity and readability.
+ 
+
+These questions are important and lie a the heart of the module. Let's discuss them, as you did by raising this point.
+
+
+We will not penalize you for trying to communicate well. We shall discuss our communication attempts openly and in a friendly manner."
+"How is ""rune trials"" graded?",You will be graded on both the correctness of output and good programming practices.
+how early must an assignment be submitted to gain extra XP for early submission?,"The XP bonus starts at 100 XP, when the assignment is just released.
+
+2 days after the release time, the XP will drop slowly to 0 as the submission deadline looms (decreasing linearly)
+
+ 
+
+For example, if a mission opens on 1 Jan 0000, and closes on 13 Jan 0000, the XP bonus will stay at 100 until 3 Jan 0000.
+
+It will then drop by 10 every day, which turns out to be a loss of 1 XP every 2 h 24 mins, until it reaches 0 on 13 Jan 0000.
+
+ 
+
+Don't feel too stressed over the need to submit early, though, 100 XP is nothing compared to how much you can get from some of the Missions and Quests!"
+how do I comment out multiple lines?,"Multiple lines can be commented out using
+
+/* 
+comment here
+more comment here
+*/"
+Does source have a dictionary data type? ,"To satisfy your curiosity, you can take a look at Section 3.3.3 of the textbook, see https://sicp.comp.nus.edu.sg/chapters/60
+We will cover this section in Unit 3 of the module, around Week 8."
+How do I convert strings to numbers?,"You may be interested in the function stringify, which is documented in the Source §1 pages: https://sicp.comp.nus.edu.sg/source/source_1/"
+Is there a source style guide?,https://sicp.comp.nus.edu.sg/source/source_styleguide.pdf
+Are iterative processes always more desirable than recursive ones? ,"Not really, there are many factors to think about when deciding which one is better. Sometimes the recursive solution is fairy straightforward, such as in the case of factorial(n), where we just multiply n to factorial(n - 1) for the recursive case. In that situation, it might be easier to read and understand a recursive solution than an iterative one"
+Is it possible in source to define another function inside a function?,"Yes, I've been shying away from this technique in the first two weeks, to keep things simple. In the coming Wednesday lecture, L3, I will introduce such nested functions and will explain the concept of scope that you will need, in order to understand such programs."
+Is a recursive function counted as higher order?,"It depends on the kind of recursive function. Not all recursive functions are higher order, take factorial as an example. Factorial takes in a number and returns a number as the result, so it would not be higher order"
+How do I connect 2 parts together in Mission 4 Question 3?,"Several tips for Mission 4 Question 3: 
+
+1. You would want to draw from the bottom up.
+
+2. Make sure the bottom circle is drawn from the open end to the center, and the top circle from the centre to the other open end. For this you might want to use conditional expressions.
+
+3. Then you could just translate the center of the bottom or top circle or both."
+Why pairs when when can simply use lists?,"The lists used in Source are an abstraction of the stacked pairs. So we first learn how to create lists with pairs, then we abstract away the pairs so that we just see a single list.
+Additionally, what you know as a list (and what we are actually implementing here) might be a common data structure commonly known as Linked Lists, which is implemented in a way that is similar to ""stacking pairs"". Briefly, linked lists are made by ""stacking pairs"" such that for each pair:
+
+First item: holds the value you would like to store
+Second item: points to the next PAIR"
+What if the number we want to find is not in the range of the binary search? ,"There's two variants of binary search, both bearing the same name and utilize the same assumption (""uniformity hunch"". More generally, a monotone function.).
+
+ 
+
+The one that is taught in CS1101S searches a space for a smallest value x satisfying f(x). The implicit assumption here is that f(x) must be true for some x in the range.
+
+ 
+
+The standard one in higher data structures and algorithms searches for some value x satisfying f(x). This does not require that there exists x satisfying f(x)."
+What is the definition of a deferred operation?,Did you read the textbook section on the topic? It's quite short and easy to read: https://sicp.comp.nus.edu.sg/chapters/12
+what is the Difference between const of lists and const of primitive values?,"An example question:
+Why can const a = list(x,y) be changed using set_head/set_tail, shouldn't it be let a = list(x,y) instead of const a?
+Answer: set_head and set_tail changes the _list_ that a points to, but does not change so that a points to a different list.
+
+(If the list was functional, then we could not use const because set_head/set_tail would create a different list.)"
+what is a name?,"There are only two kinds of names: constants and variables. A name can refer to any value: booleans, numbers, functions, pairs, runes, etc."
+Where can I find the documentation of the parse tree of the parser?,"Section 4.1.2 is dedicated to the representation of programs and thus to parse.
+
+Note however that 4.1.2 does not cover some constructs such as loops and arrays. Let me try to come up with a document for parse. Ill get back to you on this."
+How do i know which one is smaller between two strings?,"Alphabetically. e.g. ""ha"" < ""hb"".
+
+This might be helpful in understanding the problem
+
+https://javascript.info/comparison#string-comparison"
+How exactly do string inequalities work ?,"String comparison works as such:
+1. Compare the first character in each string. If the character from the first string is greater than the character from the second string, then the first string is greater than the second string and vice versa.
+2. If the two characters are the same, continue on to the next character of each string and compare them.
+3. Repeat the above until the two characters being compared are not the same or the end of one of the strings is reached.
+4. If both strings are of equal length, then the two strings are equal. Else, the longer string is greater.
+ 
+Applying the above algorithm to the example ""aaronbbb"" > ""aaronaaaaa""
+""a"" === ""a""
+""a"" === ""a""
+""r"" === ""r""
+""o"" === ""o""
+""n"" === ""n""
+""b"" > ""a"", therefore ""aaronbbb"" > ""aaronaaaaa""
+
+https://javascript.info/string#comparing-strings"
+What is the rationale behind having the path expire so quickly? ,"Master Eldric: You should do it in a timely manner. I.e. Before the next lecture/assignment that requires it.
+
+Martin: Yes, Paths are meant as a quick check that you have understood the main points of the respective lecture/brief."
+I am experiencing an issue with Saving my code on Source.,"The save issue, once you save and the code dissappears, press ctrl z to undo. The code will reappear. Copy your code to a notepad or somewhere and refresh the page."
+Is there any particular reason lists must end with a null? ,"null represents an empty list.
+
+The definition of a list is that it is either
+
+the empty list, or
+
+a pair of (some value) and (a list).
+
+
+
+So by this definition a list must end with null."
+Is there anyway I can change the starting point of a curve? ,"Yes. Try drawing your curve in reverse.
+
+By interchanging the endpoint with the starting point, I assume you mean changing the direction in which you draw your circle (clockwise or anticlockwise).
+
+Currently, as T goes from 0 to 1 (i.e. T increases), the shape you get gets drawn in a clockwise direction. How do we tweak your code such that it gets drawn in the anticlockwise direction?"
+What is a REPL?,"A REPL is a Read-Evaluate-Print Loop. It is the behaviour of the bottom right frame of the academy where you can type arbitrary expressions which are then Read, Evaluated and the result Printed. The Loop part refers to the fact that this behaviour is repeated as infinitum. 
+
+https://en.m.wikipedia.org/wiki/Read–eval–print_loop"
+Why are logical operators not considered deferred operations?,"&& (as well as ||) is known as a ""short-circuit"" or ""lazy"" operator. When the system evaluates ""false &&"", it immediately concludes that the entire expression must be false and hence does not even bother to evaluate f(n-1). This means that there is no recursive function call happening at all here as f(n-1) is never evaluated.
+
+Please review Brief B1, where we introduced the ""lazy"" boolean operators as abbreviations for conditional expressions:
+https://nuscast.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=c0467dd0-c784-4ac4-b1cd-aaab003173de
+
+To understand the program, please replace the operators with conditional expressions as in the brief. Then it becomes clear that the program gives rise to an iterative process. For good measure, type the program into the Source Academy and observe in the substituter if any deferred operations accumulate."
+is the invert function basically a function that changes the start point of a curve to an end point and vice versa?,Yes. It draws the curve backwards.
+What are some good shortcuts in Source Academy?,https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts
+What is the definition of a binary search tree?,"A binary search tree of Strings is a binary tree of Strings that has an additional property: for each tree whose entry is s, all entries in its left branch are alphabetically smaller than s and all entries in its right branch are alphabetically larger than s (we assume no duplicates here)."
+Do binary search trees have duplicates?,"Yes, binary search trees do not have duplicates. The point is to find an entry in the tree that is identical to a given element. Duplicates are not going to help, so we make sure we avoid them when we construct our binary search trees."
+What are some useful exam strategies?,"From Eldric:
+
+Sleep early before the paper. 
+Clarify doubts early. The earlier you clarify it, the less damage there will be. 
+CS1101S is a skills module. We test skills, not memorization.
+Bringing code into exam is useless. Recommend annotating core ideas if doing so.
+Attempt all paths. The skills inside are purely from the lecture. I.e. examinable.
+Write down ideas/working before writing code. Partial credit can be given on those.
+
+From Martin:
+Read the question really really carefully. When we are marking, we are often surprised to see the different ways students can misunderstand the question. A small mistake in reading the question can lead you to think it's a different question. We usually do not give any credit for solutions of problems other than the ones stated. Otherwise, you could just copy down some ""solutions"" on your cheat sheet, and enter the one that is ""closest"" to the stated problem. We do not want to encourage such a thing.
+Programming questions: Don't program before you have essentially worked out your solution. The thrashing that results from trying to solve a problem by ""programming"" without having a solution in mind is what eats your time. In an assessment, it can lead to disaster.
+Programming questions: Ask the problem for hints for the solution:
+Have you seen such a problem in the past? Is it a special case of an abstraction that you know? If yes, use the abstraction! If no, use the following two:
+What data structures are there in the problem? Do those data structures tell you how to construct a solution? If you have numbers, what numbers could you have? Does it help asking if it's even or odd, positive or negative, zero or non-zero? If you have a list, does it make sense asking if the list is null or non-null? If it's non-null, how can you make use of the head and the tail to construct a solution?
+What if you knew a way to solve a smaller problem? What would a ""smaller problem"" even mean, in the particular case at hand? How would you construct a solution to a given problem, if you knew a solution to a smaller problem?"
+How do I find the orders of growth accurately and quickly?,"From Terence:
+
+You first have to know the differences between omega, theta, and Big-O.
+
+You can then use this general rule to figure out order of growth:
+1. To determine the order of growth of a certain function f, you can check the number of levels of recursion and see how it relates to the argument, n. An example is merge sort, where we observe that it has 2logn levels.
+2. We can then check the functions involved at every level of recursion. In merge sort, the take, drop and merge functions have a runtime of theta(n). These are the functions involved at every level of recursion.
+3. The last step is to multiply the levels of recursion with the runtime of the functions at every level. (merge sort has a runtime of theta(n x logn))"
+How do I implement partition using higher order functions?,Hint: There are three higher-order list processing functions in Brief B5.
+Why do we still need lists if we have arrays?,"Lists remain relevant for us, even after we learned about arrays.(What we simply call ""lists"" is generally known as ""linked lists"" or more precisely ""singly linked lists"".)
+
+Lists have the advantage that it's much easier to insert and remove individual elements in any position. Doing that in arrays would in general require much copying and book keeping. An extreme example is the operation to add an element to the beginning of the data structure. For lists, this is simply done by the pair function, whereas such an operation requires the copying of all existing items over by one position for arrays.
+
+As another example, consider a queue data structure, implemented using a list, as shown in Brief B7. At any point of time, we only need memory proportional to the current number of elements in the queue. If you implement the queue using arrays, this is much harder to achieve.
+
+List processing functions tend to be very easy to write and to maintain, and to prove correct. Compare for example the list and array versions of our sorting algorithms: The list versions tend to be much simpler and their correctness is immediately obvious, while programming the array versions is tedious and error prone.
+
+As a result, lists allow for rapid prototyping of applications that require complex symbolic processing. Because of these properties, lists are among the most commonly used data structures today, especially in functional programming."
+What is the time complexity of array_length?,"This is a bit of a hairy question, because Source works on JavaScript, and JavaScript arrays are not really arrays in the traditional sense.
+
+But, with some assumptions about the platform you are on, we can say it is O(1). The length is stored alongside the array."
+"For environment diagram, if a pair is created, where does the pair points to?","A pair is represented as a box in the environment model diagrams. Such pair boxes are just like the box-and-pointer diagrams from Unit 2. You may remember: A pair itself doesn't ""point to"" anything. A pair has a head and tail, and it depends on your program what is in the head and what is in the tail. If those are other pairs or functions, you will have an arrow that goes from the left or right side of the box to the respective object.
+
+Note that currently, our environment visualizer is not able to draw box-and-pointer diagrams. Instead, it just shows a triangle with an exclamation mark, instead of a box for any pair."
+Is map a predeclared function in the global environment?,"Yes. The predeclared functions are all listed in the Specification of Source §3, in section ""Names"" (page 4 onwards).
+
+ 
+
+This section also clarifies which predeclared names are considered ""primitive"". Remember that we do not create environment frames for applications of primitive functions.
+
+ 
+
+If you want to draw the environment model diagrams for programs in which predeclared non-primitive functions such as map and accumulate are applied, you can refer to their implementation in Appendix ""List Library"" (page 10 onwards) and Appendix ""Stream Library"" (page 16 onwards)."
+Is accumulate a predeclared function in the global environment?,"Yes. The predeclared functions are all listed in the Specification of Source §3, in section ""Names"" (page 4 onwards).
+
+ 
+
+This section also clarifies which predeclared names are considered ""primitive"". Remember that we do not create environment frames for applications of primitive functions.
+
+ 
+
+If you want to draw the environment model diagrams for programs in which predeclared non-primitive functions such as map and accumulate are applied, you can refer to their implementation in Appendix ""List Library"" (page 10 onwards) and Appendix ""Stream Library"" (page 16 onwards)."
+Are we allowed to use global variables in Revealing the Source?,"Each question in ""Revealing the Source"" says ""You are free to make whatever changes you like to the meta-circular evaluator, as long as you add comments to document your changes."""
+What is a compound function?,"The word ""compound"" is used in the textbook to distinguish our normal functions (introduced with function declaration or function definition) from primitive functions such as math_pow.
+
+The term is introduced in section 1.1: https://sicp.comp.nus.edu.sg/chapters/6#p3
+
+The evaluation of compound functions is explained here: https://sicp.comp.nus.edu.sg/chapters/76#p12
+
+The construction of compound functions is explained here: https://sicp.comp.nus.edu.sg/chapters/76#p4"
+"Are map, filter and accumulate compound or primitive functions?","Compound. See https://sicp.comp.nus.edu.sg/source/source_4.pdf (pg 5 and 6). This says that those functions are not primitive. Also, if you observe how they are implemented in the MCE, you'll realise they are used as compound functions."
+Is there a way to remove elements from array without creating a new array?,"Please review the first few slides of Brief B8. It has all you need to know about Source arrays. There are no array operations in Source other than those given in these slides. Here is a summary:
+
+Constructor:
+[x1, x2, ..., xn]: Constructing an array by listing its first n elements, where n ≤ 0
+
+Accessors:
+a [ i ]: accessing an array a with index i, where i is an index; returns undefined if no value has been assigned yet;
+
+array_length: see https://sicp.comp.nus.edu.sg/source/ARRAYS/global.html#array_length
+
+Mutator:
+a [ i ] = v; : assignment: changing an array such that v is at index i; extends the array if necessary."
+How do I find out more about arrays in Source?,"Please review the first few slides of Brief B8. It has all you need to know about Source arrays. There are no array operations in Source other than those given in these slides. Here is a summary:
+
+Constructor:
+[x1, x2, ..., xn]: Constructing an array by listing its first n elements, where n ≤ 0
+
+Accessors:
+a [ i ]: accessing an array a with index i, where i is an index; returns undefined if no value has been assigned yet;
+
+array_length: see https://sicp.comp.nus.edu.sg/source/ARRAYS/global.html#array_length
+
+Mutator:
+a [ i ] = v; : assignment: changing an array such that v is at index i; extends the array if necessary."
